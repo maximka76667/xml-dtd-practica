@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Viviendas -->
+<!ELEMENT viviendas (vivienda+) >
+
+<!-- Vivienda -->
+<!ELEMENT vivienda (descripcion?, distribucion, localizacion, anoConstruccion, caracterisicas) >
+<!ATTLIST vivienda
+    id ID #REQUIRED
+    regimen (venta | alquilar | ambos) #REQUIRED
+    tipo (casa | piso | chalet) #REQUIRED
+    nif_propietario IDREF #REQUIRED 
+    precio CDATA #IMPLIED >
+
+<!ELEMENT descripcion (#PCDATA) >
+<!ELEMENT distribucion (supeficie, numero_habitaciones, numero_banos) >
+
+<!ELEMENT supeficie (#PCDATA) >
+<!ELEMENT numero_habitaciones (#PCDATA) >
+<!ELEMENT numero_banos (#PCDATA) >
+
+<!ELEMENT localizacion (lon, lat) >
+
+<!ELEMENT lon (#PCDATA) >
+<!ELEMENT lat (#PCDATA) >
+
+<!ELEMENT anoConstruccion (#PCDATA) >
+<!ELEMENT caracterisicas (#PCDATA) >
+
+<!-- Propietarios -->
+<!ELEMENT propietarios (propietario+) >
+
+<!-- Propietario -->
+<!ELEMENT propietario (nombre, apellidos, telefono, email) >
+<!ATTLIST propietario nif ID #REQUIRED >
+
+<!ELEMENT nombre (#PCDATA) >
+<!ELEMENT apellidos (#PCDATA) >
+<!ELEMENT telefono (#PCDATA) >
+<!ELEMENT email (#PCDATA) >
