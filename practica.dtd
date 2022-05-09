@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- Inmobiliaria -->
+<!ELEMENT inmobiliaria (viviendas, propietarios) >
+
 <!-- Viviendas -->
 <!ELEMENT viviendas (vivienda+) >
 
@@ -10,7 +13,8 @@
     regimen (venta | alquilar | ambos) #REQUIRED
     tipo (casa | piso | chalet) #REQUIRED
     nif_propietario IDREF #REQUIRED 
-    precio CDATA #IMPLIED >
+    precio CDATA #IMPLIED
+    >
 
 <!ELEMENT descripcion (#PCDATA) >
 <!ELEMENT distribucion (supeficie, numero_habitaciones, numero_banos) >
@@ -25,7 +29,10 @@
 <!ELEMENT lat (#PCDATA) >
 
 <!ELEMENT anoConstruccion (#PCDATA) >
-<!ELEMENT caracterisicas (#PCDATA) >
+<!ELEMENT caracterisicas EMPTY >
+<!ATTLIST caracterisicas amueblado (si | no) #IMPLIED
+ascensor (si | no) #IMPLIED
+garaje (si | no) #IMPLIED>
 
 <!-- Propietarios -->
 <!ELEMENT propietarios (propietario+) >

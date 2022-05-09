@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inmobiliaria SYSTEM "practica.dtd" >
+<inmobiliaria>
+    <viviendas>
+        <vivienda id="_1" regimen="alquilar" tipo="piso" nif_propietario="H-12345678" precio="2500">
+            <descripcion>Piso central en NY</descripcion>
+            <distribucion>
+                <supeficie>45</supeficie>
+                <numero_habitaciones>2</numero_habitaciones>
+                <numero_banos>1</numero_banos>
+            </distribucion>
+            <localizacion>
+                <lon>-73.935242</lon>
+                <lat>40.730610</lat>
+            </localizacion>
+            <anoConstruccion>1990</anoConstruccion>
+            <caracterisicas amueblado="si" garaje="no" />
+        </vivienda>
+    </viviendas>
+    <propietarios>
+        <propietario nif="H-12345678">
+            <nombre>Marcos</nombre>
+            <apellidos>Sanchez</apellidos>
+            <telefono>1111111111</telefono>
+            <email>marcos@gmail.com</email>
+        </propietario>
+    </propietarios>
+</inmobiliaria>
